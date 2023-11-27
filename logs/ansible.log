@@ -1,0 +1,250 @@
+2023-11-23 13:53:59,488 p=9645 u=user n=ansible | vm1 | FAILED! => {
+    "msg": "to use the 'ssh' connection type with passwords or pkcs11_provider, you must install the sshpass program"
+}
+2023-11-23 13:56:15,030 p=9779 u=user n=ansible | vm1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-11-23 14:00:41,532 p=9961 u=user n=ansible | vm1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-11-23 14:21:32,280 p=10491 u=user n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-11-23 14:21:32,286 p=10491 u=user n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2023-11-23 14:21:48,043 p=10497 u=user n=ansible | vm1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-11-23 14:27:04,136 p=10650 u=user n=ansible | vm1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-11-23 14:27:50,074 p=10710 u=user n=ansible | vm1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-11-23 14:28:46,655 p=10786 u=user n=ansible | ERROR! failed to combine variables, expected dicts but got a 'dict' and a 'AnsibleUnicode': 
+{}
+"ansible_ssh_host=192.168.82.171 ansible_ssh_user=user ansible_ssh_pass=user ansible_become_pass=user"
+2023-11-23 14:29:55,156 p=10817 u=user n=ansible | vm1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-11-23 14:30:40,312 p=10884 u=user n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-11-23 14:30:40,318 p=10884 u=user n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2023-11-23 14:30:40,319 p=10884 u=user n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: vm1
+
+2023-11-24 15:44:21,116 p=18909 u=user n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-11-24 15:44:21,124 p=18909 u=user n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2023-11-24 15:44:21,371 p=18909 u=user n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: vm1
+
+2023-11-24 15:44:21,372 p=18909 u=user n=ansible | PLAY [Install nginx on Ubuntu] ****************************************************
+2023-11-24 15:44:21,372 p=18909 u=user n=ansible | skipping: no hosts matched
+2023-11-24 15:44:21,372 p=18909 u=user n=ansible | PLAY RECAP ************************************************************************
+2023-11-24 15:44:52,469 p=18922 u=user n=ansible | PLAY [Install nginx on Ubuntu] ****************************************************
+2023-11-24 15:44:52,503 p=18922 u=user n=ansible | TASK [Gathering Facts] ************************************************************
+2023-11-24 15:44:56,359 p=18922 u=user n=ansible | ok: [vm1]
+2023-11-24 15:44:56,403 p=18922 u=user n=ansible | TASK [nginx : Install nginx Debian/Ubuntu] ****************************************
+2023-11-24 15:44:58,844 p=18922 u=user n=ansible | fatal: [vm1]: FAILED! => {"cache_update_time": 1700550023, "cache_updated": false, "changed": false, "msg": "'/usr/bin/apt-get -y -o \"Dpkg::Options::=--force-confdef\" -o \"Dpkg::Options::=--force-confold\"       install 'nginx=1.18.0-6ubuntu14.4'' failed: E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?\n", "rc": 100, "stderr": "E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?\n", "stderr_lines": ["E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)", "E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?"], "stdout": "", "stdout_lines": []}
+2023-11-24 15:44:58,846 p=18922 u=user n=ansible | PLAY RECAP ************************************************************************
+2023-11-24 15:44:58,846 p=18922 u=user n=ansible | vm1                        : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-11-24 15:50:39,557 p=19106 u=user n=ansible | PLAY [Install nginx on Ubuntu] ****************************************************
+2023-11-24 15:50:39,577 p=19106 u=user n=ansible | TASK [Gathering Facts] ************************************************************
+2023-11-24 15:50:43,556 p=19106 u=user n=ansible | ok: [vm1]
+2023-11-24 15:50:43,598 p=19106 u=user n=ansible | TASK [nginx : Install nginx Debian/Ubuntu] ****************************************
+2023-11-24 15:51:06,286 p=19106 u=user n=ansible | changed: [vm1]
+2023-11-24 15:51:06,302 p=19106 u=user n=ansible | TASK [nginx : Create directory for virtualhost] ***********************************
+2023-11-24 15:51:07,194 p=19106 u=user n=ansible | changed: [vm1]
+2023-11-24 15:51:07,211 p=19106 u=user n=ansible | TASK [nginx : Copy virtualhost config] ********************************************
+2023-11-24 15:51:08,796 p=19106 u=user n=ansible | changed: [vm1]
+2023-11-24 15:51:08,811 p=19106 u=user n=ansible | TASK [nginx : Copy index.html] ****************************************************
+2023-11-24 15:51:09,878 p=19106 u=user n=ansible | changed: [vm1]
+2023-11-24 15:51:09,938 p=19106 u=user n=ansible | RUNNING HANDLER [nginx : restart nginx] *******************************************
+2023-11-24 15:51:11,565 p=19106 u=user n=ansible | changed: [vm1]
+2023-11-24 15:51:11,597 p=19106 u=user n=ansible | PLAY RECAP ************************************************************************
+2023-11-24 15:51:11,597 p=19106 u=user n=ansible | vm1                        : ok=6    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-24 16:33:48,511 p=20269 u=user n=ansible | PLAY [Install nginx on Ubuntu] ****************************************************
+2023-11-24 16:33:48,531 p=20269 u=user n=ansible | TASK [Gathering Facts] ************************************************************
+2023-11-24 16:33:52,118 p=20269 u=user n=ansible | ok: [vm1]
+2023-11-24 16:33:52,163 p=20269 u=user n=ansible | TASK [nginx : Install nginx Debian/Ubuntu] ****************************************
+2023-11-24 16:33:54,806 p=20269 u=user n=ansible | ok: [vm1]
+2023-11-24 16:33:54,827 p=20269 u=user n=ansible | TASK [nginx : Copy virtualhost config] ********************************************
+2023-11-24 16:33:56,358 p=20269 u=user n=ansible | changed: [vm1]
+2023-11-24 16:33:56,374 p=20269 u=user n=ansible | TASK [nginx : Copy index.html] ****************************************************
+2023-11-24 16:33:57,439 p=20269 u=user n=ansible | fatal: [vm1]: FAILED! => {"changed": false, "checksum": "d3023f8cb078e52b54e8322436e4db048218a1f8", "msg": "Destination directory /var/www/vm1 does not exist"}
+2023-11-24 16:33:57,441 p=20269 u=user n=ansible | PLAY RECAP ************************************************************************
+2023-11-24 16:33:57,441 p=20269 u=user n=ansible | vm1                        : ok=3    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-11-24 16:37:11,904 p=20460 u=user n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected '-' indicator
+
+The error appears to be in '/home/user/ansible/roles/nginx/tasks/main.yml': line 9, column 2, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+ - name: create symlink
+ ^ here
+
+2023-11-24 16:39:01,924 p=20506 u=user n=ansible | ERROR! conflicting action statements: file, src
+
+The error appears to be in '/home/user/ansible/roles/nginx/tasks/main.yml': line 9, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: create symlink
+  ^ here
+
+2023-11-24 16:42:36,827 p=20619 u=user n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/user/ansible/roles/nginx/tasks/main.yml': line 10, column 12, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+- name: create symlink
+  file: src: /etc/nginx/sites-available/{{ server_name }}.conf dest: /etc/nginx/sites-enabled/default
+           ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2023-11-24 16:48:42,386 p=20753 u=user n=ansible | ERROR! conflicting action statements: file, state
+
+The error appears to be in '/home/user/ansible/roles/nginx/tasks/main.yml': line 9, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: create symlink
+  ^ here
+
+2023-11-24 16:49:23,733 p=20776 u=user n=ansible | ERROR! conflicting action statements: file, state
+
+The error appears to be in '/home/user/ansible/roles/nginx/tasks/main.yml': line 9, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Create symlink
+  ^ here
+
+2023-11-24 16:50:18,036 p=20799 u=user n=ansible | ERROR! conflicting action statements: file, state
+
+The error appears to be in '/home/user/ansible/roles/nginx/tasks/main.yml': line 9, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Create symlink
+  ^ here
+
+2023-11-24 16:50:53,605 p=20822 u=user n=ansible | PLAY [Install nginx on Ubuntu] ****************************************************
+2023-11-24 16:50:53,625 p=20822 u=user n=ansible | TASK [Gathering Facts] ************************************************************
+2023-11-24 16:50:57,171 p=20822 u=user n=ansible | ok: [vm1]
+2023-11-24 16:50:57,219 p=20822 u=user n=ansible | TASK [nginx : Install nginx Debian/Ubuntu] ****************************************
+2023-11-24 16:50:59,533 p=20822 u=user n=ansible | ok: [vm1]
+2023-11-24 16:50:59,549 p=20822 u=user n=ansible | TASK [nginx : Copy virtualhost config] ********************************************
+2023-11-24 16:51:01,069 p=20822 u=user n=ansible | ok: [vm1]
+2023-11-24 16:51:01,085 p=20822 u=user n=ansible | TASK [nginx : Create directory for virtualhost] ***********************************
+2023-11-24 16:51:01,660 p=20822 u=user n=ansible | changed: [vm1]
+2023-11-24 16:51:01,678 p=20822 u=user n=ansible | TASK [nginx : Copy index.html] ****************************************************
+2023-11-24 16:51:02,996 p=20822 u=user n=ansible | changed: [vm1]
+2023-11-24 16:51:03,061 p=20822 u=user n=ansible | RUNNING HANDLER [nginx : restart nginx] *******************************************
+2023-11-24 16:51:04,608 p=20822 u=user n=ansible | changed: [vm1]
+2023-11-24 16:51:04,637 p=20822 u=user n=ansible | PLAY RECAP ************************************************************************
+2023-11-24 16:51:04,638 p=20822 u=user n=ansible | vm1                        : ok=6    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-24 17:18:28,284 p=21568 u=user n=ansible | PLAY [Install nginx on Ubuntu] ****************************************************
+2023-11-24 17:18:28,316 p=21568 u=user n=ansible | TASK [Gathering Facts] ************************************************************
+2023-11-24 17:18:31,883 p=21568 u=user n=ansible | ok: [vm1]
+2023-11-24 17:18:31,927 p=21568 u=user n=ansible | TASK [nginx : Install nginx Debian/Ubuntu] ****************************************
+2023-11-24 17:18:34,263 p=21568 u=user n=ansible | ok: [vm1]
+2023-11-24 17:18:34,279 p=21568 u=user n=ansible | TASK [nginx : Copy virtualhost config] ********************************************
+2023-11-24 17:18:35,799 p=21568 u=user n=ansible | ok: [vm1]
+2023-11-24 17:18:35,818 p=21568 u=user n=ansible | TASK [nginx : Create a symbolic link] *********************************************
+2023-11-24 17:18:36,388 p=21568 u=user n=ansible | changed: [vm1]
+2023-11-24 17:18:36,406 p=21568 u=user n=ansible | TASK [nginx : Create directory for virtualhost] ***********************************
+2023-11-24 17:18:36,989 p=21568 u=user n=ansible | ok: [vm1]
+2023-11-24 17:18:37,005 p=21568 u=user n=ansible | TASK [nginx : Copy index.html] ****************************************************
+2023-11-24 17:18:38,021 p=21568 u=user n=ansible | ok: [vm1]
+2023-11-24 17:18:38,095 p=21568 u=user n=ansible | PLAY RECAP ************************************************************************
+2023-11-24 17:18:38,095 p=21568 u=user n=ansible | vm1                        : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-24 17:30:45,304 p=22354 u=user n=ansible | PLAY [Install nginx on Ubuntu] ****************************************************
+2023-11-24 17:30:45,341 p=22354 u=user n=ansible | TASK [Gathering Facts] ************************************************************
+2023-11-24 17:30:49,298 p=22354 u=user n=ansible | ok: [nginx]
+2023-11-24 17:30:49,340 p=22354 u=user n=ansible | TASK [nginx : Install nginx Debian/Ubuntu] ****************************************
+2023-11-24 17:31:09,730 p=22354 u=user n=ansible | changed: [nginx]
+2023-11-24 17:31:09,747 p=22354 u=user n=ansible | TASK [nginx : Copy virtualhost config] ********************************************
+2023-11-24 17:31:11,371 p=22354 u=user n=ansible | changed: [nginx]
+2023-11-24 17:31:11,388 p=22354 u=user n=ansible | TASK [nginx : Create a symbolic link] *********************************************
+2023-11-24 17:31:12,248 p=22354 u=user n=ansible | changed: [nginx]
+2023-11-24 17:31:12,265 p=22354 u=user n=ansible | TASK [nginx : Create directory for virtualhost] ***********************************
+2023-11-24 17:31:12,861 p=22354 u=user n=ansible | changed: [nginx]
+2023-11-24 17:31:12,879 p=22354 u=user n=ansible | TASK [nginx : Copy index.html] ****************************************************
+2023-11-24 17:31:13,965 p=22354 u=user n=ansible | changed: [nginx]
+2023-11-24 17:31:14,026 p=22354 u=user n=ansible | RUNNING HANDLER [nginx : restart nginx] *******************************************
+2023-11-24 17:31:15,593 p=22354 u=user n=ansible | changed: [nginx]
+2023-11-24 17:31:15,626 p=22354 u=user n=ansible | PLAY RECAP ************************************************************************
+2023-11-24 17:31:15,627 p=22354 u=user n=ansible | nginx                      : ok=7    changed=6    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-11-27 11:10:50,916 p=4433 u=user n=ansible | PLAY [Install nginx on Ubuntu] ****************************************************
+2023-11-27 11:10:50,943 p=4433 u=user n=ansible | TASK [Gathering Facts] ************************************************************
+2023-11-27 11:10:54,022 p=4433 u=user n=ansible | ok: [nginx]
+2023-11-27 11:10:54,069 p=4433 u=user n=ansible | TASK [nginx : Install nginx Debian/Ubuntu] ****************************************
+2023-11-27 11:10:56,455 p=4433 u=user n=ansible | ok: [nginx]
+2023-11-27 11:10:56,474 p=4433 u=user n=ansible | TASK [nginx : Copy virtualhost config] ********************************************
+2023-11-27 11:10:58,082 p=4433 u=user n=ansible | ok: [nginx]
+2023-11-27 11:10:58,100 p=4433 u=user n=ansible | TASK [nginx : Create a symbolic link] *********************************************
+2023-11-27 11:10:58,694 p=4433 u=user n=ansible | ok: [nginx]
+2023-11-27 11:10:58,711 p=4433 u=user n=ansible | TASK [nginx : Create directory for virtualhost] ***********************************
+2023-11-27 11:10:59,285 p=4433 u=user n=ansible | ok: [nginx]
+2023-11-27 11:10:59,301 p=4433 u=user n=ansible | TASK [nginx : Copy index.html] ****************************************************
+2023-11-27 11:11:00,349 p=4433 u=user n=ansible | ok: [nginx]
+2023-11-27 11:11:00,421 p=4433 u=user n=ansible | PLAY RECAP ************************************************************************
+2023-11-27 11:11:00,422 p=4433 u=user n=ansible | nginx                      : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

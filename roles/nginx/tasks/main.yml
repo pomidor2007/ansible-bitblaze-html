@@ -1,0 +1,20 @@
+---
+- name: Install nginx Debian/Ubuntu
+  apt: name=nginx state=present
+  when: ansible_os_family == "Debian"
+
+- name: Copy virtualhost config
+  template: src=default.conf dest=/etc/nginx/sites-available/{{ server_name }}.conf
+  
+- name: Create a symbolic link
+  ansible.builtin.file:
+    src: /etc/nginx/sites-available/{{ server_name }}.conf
+    dest: /etc/nginx/sites-enabled/default
+    state: link
+
+- name: Create directory for virtualhost
+  file: dest=/var/www/{{ server_name }} state=directory        
+
+- name: Copy index.html
+  template: src=index.html dest=/var/www/{{ server_name}}/index.html
+  notify: restart nginx
